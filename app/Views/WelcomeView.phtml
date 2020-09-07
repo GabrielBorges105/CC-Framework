@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?=$this->getPageTitle('|')?>CC-FRAMEWORK</title>
+    <link rel="shortcut icon" href="/public/assets/img/favicon.ico" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+        .container{
+            font-family: 'Rowdies', cursive;
+            margin: 20px auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 93vh;
+        }
+        .center{
+            width: 100%;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .title{
+            font-size: 80px;
+            color: tomato;
+            animation-name: anim;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        .footer{
+            color: rgba(0,0,0,0.5)
+        }
+
+        @keyframes anim{
+            100%{
+                color: tomato;
+            }
+            50%{
+                color: #3498db;
+            }
+            0%{
+                color: tomato;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="center">
+            <h1>SEJA BEM VINDO AO</h1>
+            <h1 class="title">FRAMEWORK CC!</h1>
+            <h3 class="footer">2020 - By Jean Gabriel</h3>
+        </div>
+    </div>
+</body>
+</html>
