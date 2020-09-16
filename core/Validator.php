@@ -33,7 +33,7 @@ class Validator
                                     break;
                                 case 'minDate':
                                     if (strtotime($dataValue) < strtotime($rule[1]))
-                                        $errors[$ruleKey] = "O campo {$ruleKey} precisa ser maior ou igual a  ".date('d/m/Y', strtotime($rule[1])).".";
+                                        $errors[$ruleKey] = "O campo {$ruleKey} precisa ser maior ou igual a  " . date('d/m/Y', strtotime($rule[1])) . ".";
                                     break;
                             }
                         } else {
@@ -49,6 +49,11 @@ class Validator
                                 case 'numeric':
                                     if (!is_numeric($dataValue))
                                         $errors[$ruleKey] = "O campo {$ruleKey} precisa ser do tipo númerico!";
+                                    break;
+                                case 'image':
+                                    $extensao = strtolower(substr($dataValue, -4));
+                                    if (!($extensao == ".png" ||  $extensao == ".jpg" || $extensao == "jpeg"))
+                                        $errors[$ruleKey] = "Tipo de imagem não suportado!";
                                     break;
                             }
                         }
